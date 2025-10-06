@@ -1,25 +1,36 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Robot World Model
+description: Training an action conditioned video model
+img: assets/world_model/wm_gif.gif
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+During summer 2024 I became incredibly interested in world models. This blog post is about my explorations and models I trained during this time. Read on for some cool AI generated vids!
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+So what is a "world model"? While this term is used in many contexts, in this post I am refering to action-conditioned video models. Action conditioned meaning you can move around inside the generated world, video model meaning it generates a stream of video.
+
+Training a world model is hard because you need action labelled video data, so youtube videos won't cut it. Two common sources of this data are in robotics and gaming, but this data is not as plentiful as youtube videos. 
+
+## Attempt 1
+
+Trying to get around the data limitations, my first thought was to take a pre-trained video model and make it a world model. 
+
+Idea: take a pre-trained image -> video model and make it follow text conditioning too. 
+
+Image + text -> video, to me, is pretty close to how I defined a world model above. Image conditioning means you can condition the current chunk of generated frames on the last frame from the previous chunk, in theory allowing unlimited generation. Text conditioning can take the form of actions. E.g. "Open the door", "Pick up the banana", "Turn left", etc. 
+
+The first problem to solve was stable video diffusion is an image -> video 
+<!-- To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
     ---
     layout: page
     title: project
     description: a project with a background image
     img: /assets/img/12.jpg
-    ---
+    --- -->
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
