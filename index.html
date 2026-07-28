@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+  HOME PAGE. This is what people see first when they visit your site.
+  The navigation bar (the <nav> block) is repeated on every page so the
+  links are always at the top. The class="active" marks which page you're on.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Home page is a bit wider than the rest of the site so the text has
+       more room next to the photo. -->
+  <style> body { max-width: 810px; } </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+  </nav>
+
+  <img src="assets/kobi_laz.JPG" alt="Kobi Kelemen"
+       style="float:right; width:481px; margin:0 -205px 1em 1.5em;">
+
+  <h1>Kobi Kelemen</h1>
+  <p class="subtitle"></p>
+
+  <!-- <p>
+    Hi, thanks for stopping by
+  </p> -->
+
+  <h2>About</h2>
+  <p>
+    I am a Member of Technical Staff at <a href="https://www.lute.one/" target="_blank">Lute</a>, where I train neural networks for robot manipulation.
+  </p>
+  <p style="margin-bottom:0.2em;">
+    I frequently post my projects on <a href="https://x.com/kobi_kelemen">X</a>. Here are a few cool models I've trained-
+  </p>
+
+  <ul class="tight">
+    <li><a href="https://x.com/kobi_kelemen/status/1820002131736465772" target="_blank">Action controllable video generation model</a></li>
+    <li><a href="https://x.com/kobi_kelemen/status/1963664918827446601" target="_blank">Real time collision avoidance system</a></li>
+    <li><a href="https://x.com/kobi_kelemen/status/2032964163505381542" target="_blank">Some early tasks we trained at Lute</a></li>
+    <li><a href="https://x.com/kobi_kelemen/status/1978302513230053822" target="_blank">Visual reward model</a></li>
+  </ul>
+  <p>
+    You can reach me at
+    <a href="https://x.com/kobi_kelemen">X</a>,
+    <a href="mailto:kobi.kelemen20@gmail.com">email</a>, or see my 
+    <a href="assets/CV.pdf" target="_blank">resume</a>.
+  </p>
+
+  <h2>Writing</h2>
+  <ul class="post-list">
+    <li>
+      <a class="post-title" href="blogposts/learnings_from_1_year_truly_training_neural_nets/learnings_from_1_year_truly_training_neural_nets.html">
+        Learnings From ~1 Year (truly) Training Neural Networks
+      </a>
+      <div class="post-date">June 2026</div>
+    </li>
+  </ul>
+
+</body>
+</html>

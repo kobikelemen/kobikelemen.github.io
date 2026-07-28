@@ -1,0 +1,87 @@
+/* ============================================================
+   ONE stylesheet, shared by every page (index, about, blog, posts).
+   Change something here and it updates EVERYWHERE. That's the point
+   of keeping the CSS in its own file instead of inside each page.
+
+   The "knobs" you'll most want to play with are right here at the top.
+   ============================================================ */
+:root {
+  --text-color: #1a1a1a;        /* main text color */
+  --muted: #777;                /* dates, subtitles, secondary text */
+  --background: #fbf9f7;        /* page background (warm off-white, from vincentliu.org) */
+  --accent: #2b6cb0;            /* links and highlights */
+  --max-width: 720px;           /* how wide the content column is */
+  --font: Georgia, 'Times New Roman', serif;   /* try: system-ui, sans-serif */
+}
+
+body {
+  color: var(--text-color);
+  background: var(--background);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: var(--max-width);
+  margin: 0 auto;               /* centers the column on the page */
+  padding: 0 24px 120px;
+}
+
+/* ---- Navigation bar across the top of every page ---- */
+nav {
+  display: flex;
+  gap: 28px;
+  padding: 28px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+nav a:hover { color: var(--accent); }
+/* the page you're currently on gets highlighted via class="active" */
+nav a.active { color: var(--accent); }
+
+/* ---- Headings & text ---- */
+h1 { font-size: 2.1rem; line-height: 1.2; margin-bottom: 0.2em; }
+h2 {
+  margin-top: 2.4em;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.2em;
+}
+.subtitle { color: var(--muted); font-style: italic; margin-top: 0; }
+a { color: var(--accent); }
+ul { padding-left: 1.3em; }
+li { margin-bottom: 0.4em; }
+/* tighter spacing for compact lists (e.g. the project links on About) */
+ul.tight { margin-top: 0.2em; }
+ul.tight li { margin-bottom: 0; }
+
+/* ---- The TL;DR callout box used in posts ---- */
+.tldr {
+  background: #f4f4ef;
+  border-left: 4px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 4px;
+}
+
+code {
+  background: #f0f0eb;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* ---- Blog list (used on blog.html) ---- */
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin-bottom: 28px; }
+.post-list .post-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.post-list .post-date { color: var(--muted); font-size: 0.9rem; }
+.post-list .post-blurb { margin: 4px 0 0; }
