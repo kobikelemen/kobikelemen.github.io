@@ -80,9 +80,19 @@
   <p>
     At the end of the day the model will learn from the data that is provided to it. Obvious,
     I know, and I've heard this emphasised many times. But it really is true that you can't
-    just throw "okay" data at a model and expect it to be good. It requires a special type of
-    patience to sit with a teleoperator and collect DAgger data to patch up failure mode
-    after failure mode.
+    just throw "okay" data at a model and expect it to be good. Therefore, making a great
+    policy can involve being neurotic about the base model's failure modes and collecting
+    data to patch them up. It requires a special type of patience to sit with a teleoperator
+    and collect DAgger data to patch up failure mode after failure mode.
+  </p>
+  <p>
+    When a policy is not working, the default first suspect is always the training data. But
+    identifying data problems can be more of an art than a science. Beyond basic correctness
+    issues (corrupt data, missing data, broken data pipelines, etc), data can be “wrong” in
+    the sense that it is just hard for the model to fit or generalize from, particularly at
+    the model post-training stage where the model behavior is highly sensitive to data
+    quality. There is no correct answer here- I got a feel for what works after many, many
+    iterations.
   </p>
 
   <h2>II. Picking the right experiment to run is key</h2>
