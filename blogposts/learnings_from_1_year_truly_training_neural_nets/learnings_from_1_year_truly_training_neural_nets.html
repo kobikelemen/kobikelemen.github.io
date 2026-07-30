@@ -157,8 +157,10 @@
 
   <h2>V. Building up a good codebase makes all the difference</h2>
   <p>
-    I've learnt to be neurotic about every single line of code, <em>especially</em> in the age of agentic programming. There's nothing worse than
-    realizing a training run was wasted because of a silly bug.
+    I've learnt to be neurotic about every single line of code, <em>especially</em> in the age
+    of agentic programming, and especially working on ML code where things can be silently
+    critically wrong. This is another one of those obvious ones, but one that I’ve had to
+    learn the hard way.
   </p>
   <p style="margin-bottom:0.2em;">
     Things I like in a training codebase-
@@ -168,6 +170,7 @@
     <li>The env is reproducible and training can be run with minimal commands on a new machine.</li>
     <li>Correctness is enforced with descriptive errors.</li>
     <li>Dataloading is optimized and configs are tuned for maximum GPU utilization.</li>
+    <li>Minimizing the amount of code</li>
   </ul>
   <!-- <p>
     So generally anything that improves 
