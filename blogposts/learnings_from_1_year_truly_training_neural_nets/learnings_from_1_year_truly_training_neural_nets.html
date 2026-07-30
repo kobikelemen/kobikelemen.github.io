@@ -175,11 +175,26 @@
 
   <h2>VI. Evaluation is hard (in robotics)</h2>
   <p>
-    Performance fluctuates with lighting, the real world is generally not reproducible.
-    Success rate measurements generally have low confidence so you need many rollouts for
-    statistical significance.
-    But without proper evaluations, you have no way to get the right signal on which
-    approach is working. Hence it is a necessary pain.
+    Evaluation of robot policies can be funny (to put it nicely) because of how
+    un-reproducible they are if not done properly. To make metrics such as success rate,
+    throughput and average task progress meaningful, it’s important to define the scope
+    under which that metric is valid. So when reporting success rate, you might say 95% +-
+    2% on the carton folding task given:
+  </p>
+  <ul>
+    <li>A new carton is used for each rollout</li>
+    <li>The eval was run across different lighting conditions (implying the success rate is
+      not dependent on lighting)</li>
+    <li>The exact definition of the task and “success” is provided</li>
+    <li>Plus any other information required to make the evaluation numbers fully
+      reproducible</li>
+  </ul>
+  <p>
+    Without this it’s almost impossible to do any meaningful science. This is one of the
+    reason <a href="https://x.com/kobi_kelemen/status/2032964163505381542?s=20" target="_blank">these light boxes</a>
+    have become popular - it goes a long way towards making evaluations more reproducible
+    and helps for iterating faster. But at the end of the day, the usefulness of robots is
+    capped by these assumptions and caveats.
   </p>
 
   <h2>Looking Ahead</h2>
