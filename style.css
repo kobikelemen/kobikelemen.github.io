@@ -75,6 +75,25 @@ code {
   font-size: 0.9em;
 }
 
+/* ---- Home page profile photo ----
+   Bleeds past the content column on wide screens (negative right margin),
+   which needs a mobile override since there's no room to bleed into. */
+.profile-photo {
+  float: right;
+  width: 481px;
+  margin: 0 -205px 1em 1.5em;
+}
+
+@media (max-width: 640px) {
+  .profile-photo {
+    float: none;
+    display: block;
+    width: 60%;
+    max-width: 260px;
+    margin: 0 auto 1.5em;
+  }
+}
+
 /* ---- Blog list (used on blog.html) ---- */
 .post-list { list-style: none; padding: 0; }
 .post-list li { margin-bottom: 28px; }
