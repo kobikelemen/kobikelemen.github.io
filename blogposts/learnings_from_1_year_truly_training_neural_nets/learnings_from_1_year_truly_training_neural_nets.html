@@ -174,14 +174,14 @@
   </p> -->
 
   <h2>VI. Evaluation is hard (in robotics)</h2>
-  <p>
+  <p style="margin-bottom:0.2em;">
     Evaluation of robot policies can be funny (to put it nicely) because of how
     un-reproducible they are if not done properly. To make metrics such as success rate,
     throughput and average task progress meaningful, it’s important to define the scope
     under which that metric is valid. So when reporting success rate, you might say 95% +-
     2% on the carton folding task given:
   </p>
-  <ul>
+  <ul class="tight">
     <li>A new carton is used for each rollout</li>
     <li>The eval was run across different lighting conditions (implying the success rate is
       not dependent on lighting)</li>
